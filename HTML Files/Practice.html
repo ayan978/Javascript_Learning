@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="First Paragraph">All these texts will be changed</p> 
+    <button id = "practice button">click here and see magic</button> <br> <br>
+    
+    <p id="mypara1"></p>
+    
+    <script>
+         
+       /* var x = 10;
+
+        for(let a=0;a<10;a++){
+            x = 11;
+            console.log(a+x);
+
+        }
+        console.log("The last line "+x);
+
+        function fun1(){
+            let y = 101,z=102;
+            var x1 = 200;
+            x2 = 201;
+            console.log("The sum is "+(y+z));
+        }
+
+        //console.log(y);
+        //console.log(x1);
+        fun1();
+        console.log(x2);
+
+        function fun1(x){
+            return x+y+1;
+        }
+
+        var fun1 = function(x){
+            return x+2;
+        }*/
+
+       /* (function (){
+            console.log("IIFE!!!!");
+        })();
+       
+        document.getElementById("practice button").onclick = function(){
+
+            document.getElementById("First Paragraph").innerHTML = "Text Changed!!!!";
+            document.getElementById("practice button").style.display = "none";
+        }*/
+
+      /* let s = {
+
+        first : prompt(),
+        second : prompt()
+       };
+
+     document.write(s.first);*/
+
+     /*let obj = {
+         name : 'John',
+         age : 20
+     }
+
+     let arr = [1,2,obj];
+     console.log(obj.age);
+     for(let i in obj){
+         console.log(obj[i]);
+     }
+     console.log(obj.name);
+     console.log(arr[2].age);*/
+    
+     /*function execute(message){
+         document.getElementById("mypara1").innerHTML = message;
+     }
+
+     function myfun1(){
+         //console.log("myfun1");
+         execute("myfun1");
+     }
+
+     function myfun2(){
+         //console.log("myfun2");
+         execute("myfun2");
+     }
+
+     
+
+
+     myfun1();
+     myfun2();*/
+
+    
+    let fun1 = () =>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("fun1 resolved");
+            },4000)
+        })
+    }
+
+    
+    let fun2 = () =>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("fun2 resolved")
+            },1000)
+        })
+    }
+
+    let fun3 = () =>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("fun2 resolved")
+            },2000)
+        })
+    }
+
+
+
+    Promise.race([fun1(),fun2(),fun3()])
+    .then((res)=>{
+        console.log(res);
+    })
+    
+
+const solver = ()=>{
+return new Promise((resolve,reject)=>{
+    resolve("p1 solved");
+});
+}
+
+async function myFun(){
+const h = await solver();
+console.log(h);
+} 
+      
+myFun(); 
+
+    </script>
+</body>
+</html>

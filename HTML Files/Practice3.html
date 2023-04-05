@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <p id="p1" style="color:black; background-color: burlywood; width: 300px; height: 150px; font-size: 100px;"></p>
+</body>
+
+<script>
+    var x = 'Magic!';
+    function magic(){
+    setTimeout(()=>{
+        document.getElementById('p1').innerHTML = x;
+    },4000)
+}
+magic();
+</script>
+</html>
