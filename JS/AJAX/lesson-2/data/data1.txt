@@ -1,1 +1,0 @@
-<h1> Specialized text for div 3 </h1>
