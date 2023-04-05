@@ -25,3 +25,8 @@ function myCallback2(xhr){   //this function will be called after getting the re
     const container = document.getElementById('demo2');
     container.innerHTML = xhr.responseText;
 };
+
+function myCallback3(xhr){
+    const container = document.getElementById('demo3');
+    container.innerHTML = xhr.responseText;
+}
