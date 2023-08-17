@@ -8,6 +8,7 @@ function Car(name, color){
     return the_car
 }
 
+//Properties inside Car.prototype will not be created separately for each objects
 Car.prototype = {
     wheels : 4,
 
@@ -22,7 +23,9 @@ Car.prototype = {
 
 
 let car = Car('Toyota GT-One', 'Black');
+console.log(car);
 let car2 = Car('Toyota Premio', 'White');
+console.log(car2)
 
 console.log(car.name);
 console.log(car.color);
